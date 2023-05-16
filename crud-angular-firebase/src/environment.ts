@@ -5,19 +5,18 @@ export const environment = {
 
   firebaseConfig: {
 
-    apiKey: "AIzaSyCvQ9eIVMQxltw8axOjhar7yENVId2hA3w",
+    apiKey: "AIzaSyD8F6JMy8q7wpXwyC388JCAEOH-fYC7f7Y",
 
-    authDomain: "crud-projeto3.firebaseapp.com",
+    authDomain: "crud-projeto3-ca90e.firebaseapp.com",
 
-    databaseURL: "https://crud-projeto3-default-rtdb.firebaseio.com",
+    databaseURL: "https://crud-projeto3-ca90e-default-rtdb.firebaseio.com",
 
-    projectId: "crud-projeto3",
+    projectId: "crud-projeto3-ca90e",
 
-    storageBucket:  "crud-projeto3.appspot.com",
+    storageBucket:   "crud-projeto3-ca90e.appspot.com",
 
-    messagingSenderId: "266876677125",
-    appId: "1:266876677125:web:61bcc7e1b79abb2dd1806c"
-
+    messagingSenderId: "1081745739373",
+    appId: "1:1081745739373:web:8d1162a2aa71af681ff964"
 
   }
 
