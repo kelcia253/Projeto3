@@ -1,35 +1,112 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
-import { AngularFireDatabase } from '@angular/fire/compat/database';
+import { FormBuilder, FormGroup, FormControl, Validators } from '@angular/forms'
+
+import { ContatoService } from '../contato.service';
+
+
+
+import { ToastrService } from 'ngx-toastr';
+
+
 
 @Component({
+
   selector: 'app-add-contato',
+
   templateUrl: './add-contato.component.html',
+
   styleUrls: ['./add-contato.component.css']
+
 })
-export class AddContatoComponent {
-  constructor(public db: AngularFireDatabase) {}
 
-  addContato() {
+export class AddContatoComponent implements OnInit{
 
-    const objeto = {
-      matricula: 1,
-      nome: "kelcia",
-      idade: 16
+  contatoForm: FormGroup;
+
+
+
+  constructor(
+
+    private contatoService: ContatoService,
+
+    private fb: FormBuilder,
+
+    private toastr: ToastrService){
+
+      this.contatoForm = this.createForm();
+
     }
 
-    this.db.list("contatos").push("contatos")
 
-    .then( result =>
 
-      console.log(result.key)
+    ngOnInit(){
 
-    );
+      this.contatoService.getContatoList();
 
-    this.db.object("objeto").set(objeto)
-    .then( result =>
-      console.log(result)
+    }
+
+
+
+    createForm(){
+
+      return this.fb.group({
+
+        nome: new FormControl('', Validators.required),
+
+        idade: new FormControl('', Validators.required),
+
+        telefone: new FormControl('', [Validators.required,  Validators.pattern('^[0-9]+$')])
+
+      });
+
+    }
+
+
+
+    resetForm(){
+
+      this.contatoForm.reset();
+
+    }
+
+
+
+    submitForm(){
+
+      this.contatoService.insertContato(this.contatoForm.value);
+
+      this.toastr.success(
+
+        this.contatoForm.controls['nome'].value + " adicionado"
 
       );
-  }
+
+    }
+
+
+
+    get nome(){
+
+      return this.contatoForm.get('nome');
+
+    }
+
+
+
+    get idade(){
+
+      return this.contatoForm.get('idade');
+
+    }
+
+
+
+    get telefone(){
+
+      return this.contatoForm.get('telefone');
+
+    }
+
 }
+

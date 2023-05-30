@@ -25,6 +25,14 @@ import { AddContatoComponent } from './contato/add-contato/add-contato.component
 import { EditContatoComponent } from './contato/edit-contato/edit-contato.component';
 
 import { ListaContatoComponent } from './contato/lista-contato/lista-contato.component';
+import { ToastrModule } from 'ngx-toastr';
+import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { NgxPaginationModule } from 'ngx-pagination';
+
+
+
+
 
 
 
@@ -50,7 +58,17 @@ import { ListaContatoComponent } from './contato/lista-contato/lista-contato.com
 
     AngularFireDatabaseModule,
 
-    AppRoutingModule
+    AppRoutingModule,
+
+    FormsModule,
+
+    ReactiveFormsModule,
+
+    BrowserAnimationsModule, // required animations module
+
+    ToastrModule.forRoot(), // ToastrModule added
+
+    NgxPaginationModule
 
   ],
 
