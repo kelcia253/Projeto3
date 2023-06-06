@@ -18,8 +18,6 @@ import { AngularFireModule } from '@angular/fire/compat';
 
 import { AngularFireDatabaseModule } from '@angular/fire/compat/database';
 
-
-
 import { AddContatoComponent } from './contato/add-contato/add-contato.component';
 
 import { EditContatoComponent } from './contato/edit-contato/edit-contato.component';
@@ -29,12 +27,6 @@ import { ToastrModule } from 'ngx-toastr';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgxPaginationModule } from 'ngx-pagination';
-
-
-
-
-
-
 
 @NgModule({
 
