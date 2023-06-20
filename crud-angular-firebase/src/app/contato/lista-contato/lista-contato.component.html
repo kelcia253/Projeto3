@@ -6,15 +6,15 @@
 
  pt-3 pb-2 mb-3 border-bottom">
 
-<h2 class="h2">Lista de Contatos</h2>
+<h2 class="h2">Lista de Livros</h2>
 
-<a routerLink="/add-contato" class="btn btn-success" *ngIf="!listaVazia"> Adicionar Contato</a>
+<a routerLink="/add-contato" class="btn btn-dark" *ngIf="!listaVazia"> Adicionar Livros</a>
 
 </div>
 
 <!-- CONTEUDO -->
 
-<div class="pricing-header mx-auto">
+<div class="pricing-header mx-auto form-container">
 
 <!-- LOADING SPINNER -->
 
@@ -28,9 +28,9 @@
 
 <div class="text-center" *ngIf="listaVazia">
 
-<p>Nenhum contato adicionado ainda</p>
+<p>Nenhum livro adicionado ainda</p>
 
-<a routerLink="/add-contato" class="btn btn-success"> Adicionar Contato</a>
+<a routerLink="/add-contato" class="btn btn-dark"> Adicionar Livro</a>
 
 </div>
 
@@ -48,9 +48,9 @@
 
 <th scope="col">Nome</th>
 
-<th scope="col">Idade</th>
+<th scope="col">ISBN</th>
 
-<th scope="col">Telefone</th>
+<th scope="col">Quant de Pag</th>
 
 <th class="text-center" scope="col">Editar</th>
 

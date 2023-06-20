@@ -1,6 +1,6 @@
 <div class="pt-3 pb-2 mb-3 border-bottom">
 
-  <h2 class="h2">Adicionar Contato</h2>
+  <h2 class="h2 form-title">Adicionar Livros</h2>
 
 </div>
 
@@ -12,13 +12,13 @@
 
   <!-- ADAPTA O TAMANHO DO FORMULÁRIO DE ACORDO COM A TELA-->
 
-  <div class="row">
+  <div class="row form-container">
 
     <div class="col-lg-6 col-md-8 col-sm-12">
 
       <!-- LINHA 1 - CAMPO NOME -->
 
-      <div class="row">
+      <div class="row ">
 
         <div class="col-md-12 mb-3">
 
@@ -54,7 +54,7 @@
 
             [ngClass]="{'text-danger': idade?.touched && idade?.invalid}"
 
-            for="idade" class="form-label">Idade</label>
+            for="idade" class="form-label">ISBN</label>
 
           <input
 
@@ -72,7 +72,7 @@
 
           <!-- Validation FeedBack -->
 
-          <div class="invalid-feedback"><sup>*</sup>Idade obrigatório</div>
+          <div class="invalid-feedback"><sup>*</sup>ISBN obrigatório</div>
 
         </div>
 
@@ -90,7 +90,7 @@
 
             [ngClass]="{'text-danger': telefone?.touched && telefone?.invalid}"
 
-            for="telefone" class="form-label">Telefone:</label>
+            for="telefone" class="form-label">Quant de Pag:</label>
 
           <input
 
@@ -117,24 +117,17 @@
       <!-- LINHA 3 - CAMPO TELEFONE -->
 
       <!-- BOTÕES DO FORMULÁRIO -->
-
-      <div class="form-group text-end">
-
-        <button type="button" class="btn btn-secondary mx-2" (click)="resetForm()">
-
-          Limpar
-
-        </button>
-
-        <button type="submit" class="btn btn-success mx-2" [disabled]="!contatoForm.valid">
-
-          Adicionar Contato
-
-        </button>
-
-      </div>
-
-      <!-- BOTÕES DO FORMULÁRIO -->
+<div class="form-group text-end">
+  <div class="d-flex justify-content-between">
+    <button type="button" class="btn btn-dRK mx-2" (click)="resetForm()">
+      Limpar
+    </button>
+    <button type="submit" class="btn btn-dark mx-2" [disabled]="!contatoForm.valid">
+      Adicionar Livros
+    </button>
+  </div>
+</div>
+<!-- BOTÕES DO FORMULÁRIO -->
 
     </div>
 
@@ -146,4 +139,3 @@
 
 <!-- FORMULÁRIO -->
 
- 

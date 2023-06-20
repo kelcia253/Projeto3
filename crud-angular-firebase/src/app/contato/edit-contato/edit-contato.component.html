@@ -1,6 +1,6 @@
 <div class="pt-3 pb-2 mb-3 border-bottom">
 
-  <h2 class="h2">Editar Contato</h2>
+  <h2 class="h2 form-title">Editar Livro</h2>
 
 </div>
 
@@ -8,7 +8,7 @@
 
 <form [formGroup]="contatoForm" (ngSubmit)="submitForm()" novalidate>
 
-  <div class="row">
+  <div class="row fomr-container">
 
     <div class="col-lg-6 col-md-8 col-sm-12">
 
@@ -36,7 +36,7 @@
 
         <div class="col-md-12 mb-3">
 
-          <label>Idade</label>
+          <label>ISBN</label>
 
           <input
 
@@ -54,7 +54,7 @@
 
           <p *ngIf="idade?.touched && idade?.invalid" class="error">
 
-            <sup>*</sup>Informe a idade
+            <sup>*</sup>Informe ao ISBN
 
           </p>
 
@@ -66,7 +66,7 @@
 
         <div class="col-md-12 mb-3">
 
-          <label>Telefone:</label>
+          <label>Quant de Pag:</label>
 
           <input
 
@@ -84,7 +84,7 @@
 
           <p *ngIf="telefone?.touched && telefone?.invalid" class="error">
 
-            <sup>*</sup>Informe telefone
+            <sup>*</sup>Informe a quant de páginas
 
           </p>
 
@@ -102,7 +102,7 @@
 
         <button type="submit" class="btn btn-info mx-2" [disabled]="!contatoForm.valid">
 
-          Editar Contato
+          Editar Livros
 
         </button>
 
