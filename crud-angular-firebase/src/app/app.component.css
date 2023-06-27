@@ -1,13 +1,13 @@
 .nav-link {
   text-decoration: none; /* Remove sublinhado do texto */
-  color: rgb(247, 247, 247); /* Define a cor do texto */
+  color: rgb(255, 255, 255); /* Define a cor do texto */
   font-weight: bold; /* Define a espessura da fonte */
   padding: 5px 10px; /* Define o espaçamento interno */
   border-radius: 5px; /* Define o raio dos cantos do elemento */
-  background-color: #221f1f; /* Define a cor de fundo */
+  background-color: rgb(236, 112, 147); /* Define a cor de fundo */
 }
 
 .nav-link:hover {
-  background-color: rgb(117, 115, 115); /* Define a cor de fundo ao passar o mouse */
-  color: rgb(51, 51, 51); /* Define a cor do texto ao passar o mouse */
+  background-color: rgb(236, 173, 223); /* Define a cor de fundo ao passar o mouse */
+  color: rgb(0, 0, 0); /* Define a cor do texto ao passar o mouse */
 }
